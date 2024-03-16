@@ -49,7 +49,7 @@ const Todos = () => {
 
 
   return (
-    <div className="h-[calc(100vh-48px)] p-6 overflow-y-auto">
+    <div className="h-[calc(100vh-48px)] w-full p-6 overflow-y-auto">
         <TodosHeader />
         {/* todos table */}
         <div className="bg-gray-100 grid grid-rows-3 md:grid-rows-none md:grid-cols-3 gap-0.5 mt-5 rounded">

@@ -13,14 +13,8 @@ export const POST = async (req) => {
     try {
         await connectToMongoDB()
 
-        if (user === "Demo") {
-            console.log("If block fired++++++++++++++++++++=")
-            const metaArray = await Meta.find({$or: [{teacher: "demo1"}, {teacher: "demo2"}, {teacher: "demo3"}]}).limit(3)
-            return NextResponse.json({metaArray})
-        }
-
         // query meta collection
-        const metaArray = await Meta.find({})
+        const metaArray = await Meta.find({$or: [{teacher: "demo1"}, {teacher: "demo2"}, {teacher: "demo3"}]}).limit(3)
         return NextResponse.json({metaArray})
 
     } catch (error) {
