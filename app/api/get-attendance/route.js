@@ -14,7 +14,7 @@ export const POST = async (req) => {
         await connectToMongoDB()
 
         // query meta collection
-        const metaArray = await Meta.find({$or: [{teacher: "demo1"}, {teacher: "demo2"}, {teacher: "demo3"}]}).limit(3)
+        const metaArray = await Meta.find({$or: [{teacher: "demo1"}, {teacher: "demo2"}, {teacher: "demo3"}, {teacher: "demo4"}, {teacher: "demo5"}]}).limit(5)
         return NextResponse.json({metaArray})
 
     } catch (error) {
