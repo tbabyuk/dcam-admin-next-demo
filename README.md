@@ -2,9 +2,9 @@
 
 See it live: [Office Admin App](https://dcam-admin-next-demo.vercel.app/)
 
-Login Credentials for demo:  
-Email: demo@gmail.com  
-Pass: demo123
+Login Credentials for demo:  <br>
+Email: **demo@gmail.com**  
+Pass: **demo123**
 
 ## Technologies
 This project was made with:
