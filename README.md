@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Office Admin App (aka DCAM Admin Demo)
 
-## Getting Started
+See it live: [Office Admin App](https://admirable-scone-4cd8a6.netlify.app/)
 
-First, run the development server:
+## Description
+A web app used by office administration of a music school business with three main features:
+1. TODO TASKS MANAGER
+2. CALENDAR PLANNER
+3. TEACHER HOURS DASHBOARD
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Todo Tasks Manager
+Allows office admin to keep track of todo tasks for the business. Includes standard todo app functionality such as adding and deleting tasks, but also allows user to color-code tasks according priority, edit tasks, and move tasks to one of three columns: "to do tasks", "tasks in progress" and "completed tasks", according to their status.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Calendar Planner
+Allows office admin to set long-term goals and important reminders. User can click on any day in the calendar and create a reminder/goal for that day. Calendar days that have content are automatically circled when page is first loaded or when a new reminder/goal is added.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Teacher Hours Dashboard
+Allows admin to see a list of all their active teachers and whether or not the teachers have submitted their hours/attendance for the upcoming payday. If a teacher has submitted their hours, a button will become active to view attendance in a modal. Admin can also view any additional notes a teacher may have left relating to their attendance.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Background & Motivation
+This project along with all its features came together over time, starting initially with just the "Todo Tasks Manager", followed by the "Calendar Planner" and then the "Teacher Hours Dashboard". Each feature has been altered/improved on as per user feedback and this is their current state.
 
-## Learn More
+## Technologies
+The current version of this project was done with:
+* HTML + Tailwind CSS
+* React/Next.js
+* Firebase Auth
+* Firebase Firestore
 
-To learn more about Next.js, take a look at the following resources:
+## State of Completion
+Completed and actively being used by office admin. More improvements/features will be added going forward as per user feedback and business requirements.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Learning Lessons & Challenges
+### Working with Firestore data
+One of the trickier parts of this app was working with the database (Firestore) data. I first had to figure out how to best organize my raw data in the database itself, and then what data structure to use to store that data in my app once I retrieve it. This took a bit of trial and error but I eventually came up with what seemed to be the optimal solution. I also had to brush up on the methods that Firebase provides for performing CRUD operations with the todo tasks and calendar reminders. Lastly, I decided to set up a live listener to the database, so that any CRUD operations would be reflected in real time, without having to refresh the page. All this was a challenge but it also taught me a lot about working with databases, which I think is a great asset to have for Front End Developers under their belt.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Working with React Day Picker
+For the Calendar feature, I chose react-day-picker as my calendar. This was my very first time working with this component and it was a big learning curve. The trickiest part was figuring out how to limit the calendar to the time range that I wanted and how to highlight/circle the dates with content in them.
 
-## Deploy on Vercel
+### Authentication
+Although I had worked with Firebase Auth briefly before, this project gave me an opportunity to refresh my knowledge on this topic. As mentioned earlier, I removed auth functionality for the demo version, but the commented out code can still be found in FirebaseContext.js file. Because I did not need any advanced auth-based functionality, I only used the Context API for the auth.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Summary
+As mentioned, this app has been a work in progress and what you see now is its current state. I am always working to improve and optimize it even further and will continue to make updates and add more functionality as needed. For now though, it is fully-functional and is being used by the office front desk every day.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
