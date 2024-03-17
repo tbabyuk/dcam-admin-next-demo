@@ -1,47 +1,48 @@
-# Office Admin App (aka DCAM Admin Demo)
+# Office Admin App (An app for office tasks and payroll tracking)
 
-See it live: [Office Admin App](https://admirable-scone-4cd8a6.netlify.app/)
+See it live: [Office Admin App](https://dcam-admin-next-demo.vercel.app/)
 
-## Description
-A web app used by office administration of a music school business with three main features:
-1. TODO TASKS MANAGER
-2. CALENDAR PLANNER
-3. TEACHER HOURS DASHBOARD
-
-### Todo Tasks Manager
-Allows office admin to keep track of todo tasks for the business. Includes standard todo app functionality such as adding and deleting tasks, but also allows user to color-code tasks according priority, edit tasks, and move tasks to one of three columns: "to do tasks", "tasks in progress" and "completed tasks", according to their status.
-
-### Calendar Planner
-Allows office admin to set long-term goals and important reminders. User can click on any day in the calendar and create a reminder/goal for that day. Calendar days that have content are automatically circled when page is first loaded or when a new reminder/goal is added.
-
-### Teacher Hours Dashboard
-Allows admin to see a list of all their active teachers and whether or not the teachers have submitted their hours/attendance for the upcoming payday. If a teacher has submitted their hours, a button will become active to view attendance in a modal. Admin can also view any additional notes a teacher may have left relating to their attendance.
-
-## Background & Motivation
-This project along with all its features came together over time, starting initially with just the "Todo Tasks Manager", followed by the "Calendar Planner" and then the "Teacher Hours Dashboard". Each feature has been altered/improved on as per user feedback and this is their current state.
+Login Credentials for demo:
+Email: demo@gmail.com
+Pass: demo123
 
 ## Technologies
-The current version of this project was done with:
-* HTML + Tailwind CSS
-* React/Next.js
+This project was made with:
+* Next.js
+* React & Node.js
+* Tailwind CSS
 * Firebase Auth
 * Firebase Firestore
+* MongoDB
+
+## Short Description
+A web app used by the admin team of a music school business with three main features:
+1. AUTHENTICATION
+2. TASKS MANAGER / PLANNER
+3. TEACHER HOURS & PAY TRACKER
+
+## Long Description
+1. AUTHENTICATION
+Authentication was implemented with the help of Firebase Auth where each member of the admin team has their own login credentials. The UI is different depending on who the currently logged-in user is. For example, not all admin members are able to see the specific pay amount owed to each employee.
+
+2. TASKS MANAGER / PLANNER
+This part of the app was implemented with React on the front end and Firebase Firestore for the database. It includes standard todo app functionality such as adding, deleting and editing tasks, but also allows users to color-code tasks according priority and move them to one of three columns: "to do tasks", "tasks in progress" and "completed tasks", according to their status.
+
+3. TEACHER HOURS & PAY TRACKER
+This part of the app was done with React on the front end and Node.js + MongoDB on the back end. It allows admin to see at a glance which employees have submitted their work hours, the total pay owed to them, as well as detailed submission information and any notes in a modal table display. All the information is shown in a neatly-organized table.
+
+## Background & Motivation
+This was a practical project done for a small business. It began with the "Tasks Manager / Planner" first, and the "Teacher Hours & Pay Tracker" part was added later.
 
 ## State of Completion
 Completed and actively being used by office admin. More improvements/features will be added going forward as per user feedback and business requirements.
 
 ## Learning Lessons & Challenges
-### Working with Firestore data
-One of the trickier parts of this app was working with the database (Firestore) data. I first had to figure out how to best organize my raw data in the database itself, and then what data structure to use to store that data in my app once I retrieve it. This took a bit of trial and error but I eventually came up with what seemed to be the optimal solution. I also had to brush up on the methods that Firebase provides for performing CRUD operations with the todo tasks and calendar reminders. Lastly, I decided to set up a live listener to the database, so that any CRUD operations would be reflected in real time, without having to refresh the page. All this was a challenge but it also taught me a lot about working with databases, which I think is a great asset to have for Front End Developers under their belt.
-
-### Working with React Day Picker
-For the Calendar feature, I chose react-day-picker as my calendar. This was my very first time working with this component and it was a big learning curve. The trickiest part was figuring out how to limit the calendar to the time range that I wanted and how to highlight/circle the dates with content in them.
-
-### Authentication
-Although I had worked with Firebase Auth briefly before, this project gave me an opportunity to refresh my knowledge on this topic. As mentioned earlier, I removed auth functionality for the demo version, but the commented out code can still be found in FirebaseContext.js file. Because I did not need any advanced auth-based functionality, I only used the Context API for the auth.
+### Working with two databases
+This is one of a few projects where I am making use of two different databases. While I could have done the whole app with just a single database (either Firebase or MongoDB), I decided to use two as a challenge to myself and to get experience in case I ever need to deal with two databases in a more complex project. Also, Firebase was used only on the front end while I used MongoDB on the back end with the help of API routes, so this added a bit more variety to the project, which I really enjoyed.
 
 ## Summary
-As mentioned, this app has been a work in progress and what you see now is its current state. I am always working to improve and optimize it even further and will continue to make updates and add more functionality as needed. For now though, it is fully-functional and is being used by the office front desk every day.
+This was a fun app the to make and I am looking forward to adding more features to it as per business requirements!
 
 
 
