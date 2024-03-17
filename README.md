@@ -2,7 +2,7 @@
 
 See it live: [Office Admin App](https://dcam-admin-next-demo.vercel.app/)
 
-Login Credentials for demo:  <br>
+Login Credentials for demo:  
 Email: **demo@gmail.com**  
 Pass: **demo123**
 
@@ -18,7 +18,7 @@ This project was made with:
 ## Short Description
 A web app used by the admin team of a music school business with three main features:
 1. Authentication
-2. Tasks Manager / Planner
+2. Task Manager / Planner
 3. Teacher Hours & Pay Tracker
 
 ## Long Description
@@ -40,6 +40,9 @@ Completed and actively being used by office admin. More improvements/features wi
 ## Learning Lessons & Challenges
 ### Working with two databases
 This is one of a few projects where I am making use of two different databases. While I could have done the whole app with just a single database (either Firebase or MongoDB), I decided to use two as a challenge to myself and to get experience in case I ever need to deal with two databases in a more complex project. Also, Firebase was used only on the front end while I used MongoDB on the back end with the help of Route Handlers, so this added a bit more variety to the project, which I really enjoyed.
+
+### Database & UI logic
+I enjoyed the challenge of figuring out the logic and information flow between the databases and the UI, for both the Task Manager and the Pay Tracker. I think this is probably the most complex part of any application. For the Pay Tracker, I considered several ways of getting and displaying data - either getting all of it from the database on one go and storing it in local state or making a database query separately depending on what the user wanted to see. I opted for the second option in the end as I thought it was neater and a more suitable method in terms of code.
 
 ## Summary
 This was a fun app the to make and I am looking forward to adding more features to it as per business requirements!
